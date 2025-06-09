@@ -86,6 +86,10 @@
                             {% endfor %}
                         {% endif %}
 
+                        {% block view_toggle %}
+                            {# Button to toggle between image listing's grid and list view #}
+                        {% endblock %}
+
                         {% if filters %}
                             <div
                                 id="filters-drilldown"

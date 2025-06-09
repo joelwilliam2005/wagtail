@@ -1,0 +1,17 @@
+{% load wagtailadmin_tags i18n %}
+
+{% block view_toggle %}
+    <div>
+
+        <button
+            type="button"
+            class="w-filter-button"
+            aria-label="{% trans 'Toggle view' %}"
+            style="align-items: center; justify-content: center; display: flex;"
+        >
+        {% icon name="list-ul" %}
+        </button>
+
+    </div>
+
+{% endblock %}
