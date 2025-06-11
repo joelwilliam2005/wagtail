@@ -63,6 +63,9 @@
                     {% endblock %}
                 </div>
             </div>
+            {% block view_toggle %}
+                {# Button to toggle between image listing's grid and list view #}
+            {% endblock %}
 
             {% block search_form %}
                 {% if not search_url %}
@@ -80,15 +83,12 @@
                         data-w-swap-target-value="#listing-results"
                         data-w-swap-reflect-value="true"
                     >
+                        <input type="hidden" name="view" value="{{ view_mode }}">
                         {% if search_form %}
                             {% for field in search_form %}
                                 {% formattedfield field=field sr_only_label=True icon="search" %}
                             {% endfor %}
                         {% endif %}
-
-                        {% block view_toggle %}
-                            {# Button to toggle between image listing's grid and list view #}
-                        {% endblock %}
 
                         {% if filters %}
                             <div
